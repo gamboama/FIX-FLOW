@@ -5,6 +5,7 @@
     <router-link to="/users" class="router">Usuario</router-link>
     <router-link to="/tec" class="router">Tecnicos</router-link>
     <router-link to="/phones" class="router">Celulares</router-link>
+    <router-link to="/spareparts" class="router">Repuestos</router-link>
   </nav>
 </template>
 
