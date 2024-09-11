@@ -105,7 +105,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .container {
   display: grid;
   grid-template-columns: 2fr 1fr;
