@@ -35,6 +35,7 @@ const isActive = (path) => route.path === path;// Función para verificar si el 
     width: 92%;
     height: 600px;
     border-radius: 10px;
+    box-shadow: 0 15px 10px 2px rgba(0, 0, 0, 0.676);
 }
 
 .info-container {
@@ -47,6 +48,7 @@ const isActive = (path) => route.path === path;// Función para verificar si el 
     left: 0;
     right: 0;
     display: flex;
+    gap: 1px;
     justify-content: start;
     border-radius: 5px;
     z-index: -1;
@@ -55,7 +57,7 @@ const isActive = (path) => route.path === path;// Función para verificar si el 
 .router {
     text-decoration: none;
     color: white;
-    background-color: rgb(129, 129, 129);
+    background-color: rgb(70, 70, 70);
     padding: 5px 20px 40px;
     margin: 0;
     border-radius: 20px 20px 0 0;
@@ -66,5 +68,6 @@ const isActive = (path) => route.path === path;// Función para verificar si el 
     background-color: white;
     color: black;
     transform: translateY(-5px);
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.676);
 }
 </style>

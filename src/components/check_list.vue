@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import check from './check.vue';
 
 const options = ref(["N. Factura", "Cliente", "Fecha"]);
 </script>
@@ -18,7 +19,9 @@ const options = ref(["N. Factura", "Cliente", "Fecha"]);
             </form>
         </nav>
         <section class="checks-section">
-            
+            <ul>
+                <check v-for="i in 4" :key="i" :check_num="`A-000${i}`" client_name="Felipe Sierra" check_date="08/06/2004"></check>
+            </ul>
         </section>
     </section>
 </template>
@@ -32,6 +35,7 @@ const options = ref(["N. Factura", "Cliente", "Fecha"]);
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: none;
 }
 .search-bar{
     background-color: rgb(54, 54, 54);
@@ -41,6 +45,7 @@ const options = ref(["N. Factura", "Cliente", "Fecha"]);
     padding: 20px 50px;
     margin-top: 20px;
     border-radius: 40px;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.676);
 }
 .search-form{
     display: flex;
@@ -58,6 +63,7 @@ const options = ref(["N. Factura", "Cliente", "Fecha"]);
 .search-form button{
     background-color: rgb(216, 75, 23);
     padding: 0 20px;
-    border-radius: 5px
+    border-radius: 5px;
+    color: white;
 }
 </style>
