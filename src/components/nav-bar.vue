@@ -60,7 +60,7 @@ nav {
   width: 9em;
   height: 3em;
   border-radius: 30em;
-  font-size: 35px;
+  font-size: 15px;
   font-family: inherit;
   border: none;
   position: absolute;
@@ -86,10 +86,6 @@ nav {
   z-index: -1;
 }
 
-.back-button:disabled {
-  background-color: grey;
-  cursor: not-allowed;
-}
 .back-button:hover::before {
  width: 9em;
 }
