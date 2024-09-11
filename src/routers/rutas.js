@@ -20,6 +20,7 @@ const routes=[
     {
         path:'/phones',
         name: 'phones',
+        redirect: '/phones/cel-form', 
         component: phones,
         children:[
             {

@@ -17,6 +17,9 @@ const options = ref(["N. Factura", "Cliente", "Fecha"]);
                 <button type="submit">Buscar</button>
             </form>
         </nav>
+        <section class="checks-section">
+            
+        </section>
     </section>
 </template>
 
@@ -43,11 +46,18 @@ const options = ref(["N. Factura", "Cliente", "Fecha"]);
     display: flex;
     justify-content: space-around;
 }
-.search-form *{
-    border: 2px solid red;
-}
 .search-form select{
     background-color: white;
     padding: 5px 10px; 
+    border-radius: 5px;
+}
+.search-form input{
+    background-color: white;
+    border-radius: 5px;
+}
+.search-form button{
+    background-color: rgb(216, 75, 23);
+    padding: 0 20px;
+    border-radius: 5px
 }
 </style>

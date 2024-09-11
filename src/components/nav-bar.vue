@@ -38,7 +38,8 @@ nav{
 .router.active {
   background-color: white;
   color: black;
-  transform: translateX(5px);
+  transform: translateX(15px);
+  border: 1px solid rgba(0, 0, 0, 0.537);
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.418);
 }
 </style>
