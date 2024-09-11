@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory} from "vue-router";
 import tecnicos from "@/components/tecnicos.vue"
 import users from "@/components/users.vue"
-import celulares from "@/components/celulares.vue";
+import phones from "@/components/phones.vue";
 import spareParts from "@/components/spare-parts.vue";
+import celForm from "@/components/cel-form.vue";
+import check_list from "@/components/check_list.vue";
 
 const routes=[
     {
@@ -18,7 +20,17 @@ const routes=[
     {
         path:'/phones',
         name: 'phones',
-        component: celulares
+        component: phones,
+        children:[
+            {
+                path: "cel-form",
+                component: celForm
+            },
+            {
+                path: "check-list",
+                component: check_list
+            }
+        ]
     },
     {
         path: '/spareparts',
@@ -33,3 +45,5 @@ const router = createRouter({
 })
 
 export default router
+
+
