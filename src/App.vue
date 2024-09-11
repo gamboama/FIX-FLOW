@@ -1,5 +1,5 @@
 <script setup>
-import principal from "./components/principal.vue";
+import principal from "./components/nav-bar.vue";
 </script>
 
 <template>
@@ -17,7 +17,7 @@ import principal from "./components/principal.vue";
   font-family: "Roboto Mono", monospace;
 }
 .body{
-  background-color: rgba(50, 116, 50, 0.548);
+  background-color: rgba(114, 79, 13, 0.747);
   display: grid;
   grid-template-columns: 10% 90%;
   grid-template-rows: 100%;
