@@ -9,11 +9,10 @@ const isActive = (path) => route.path.startsWith(path);
 
 <template>
   <nav>
-    
     <router-link to="/users" class="router" :class="{'active': isActive('/users')}">Usuario</router-link>
     <router-link to="/tec" class="router" :class="{'active': isActive('/tec')}">Tecnicos</router-link>
     <router-link to="/phones" class="router" :class="{'active': isActive('/phones')}">Celulares</router-link>
-    <router-link to="/spareparts" class="router" :class="{'active': isActive('/spareparts')}">Repuestos</router-link>
+    <router-link to="/listSpareParts" class="router" :class="{'active': isActive('/listSpareParts')}">Repuestos</router-link>
   </nav>
 </template>
 

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory} from "vue-router";
 import tecnicos from "@/components/tecnicos.vue"
 import users from "@/components/users.vue"
 import phones from "@/components/phones.vue";
+import listSpareParts from "@/components/list-spare-parts.vue";
 import spareParts from "@/components/spare-parts.vue";
 import celForm from "@/components/cel-form.vue";
 import check_list from "@/components/check_list.vue";
@@ -33,9 +34,9 @@ const routes=[
         ]
     },
     {
-        path: '/spareparts',
-        name: 'spareparts',
-        component: spareParts
+        path: '/listSpareParts',
+        name: 'listSpareParts',
+        component: listSpareParts
     }
 ]
 
