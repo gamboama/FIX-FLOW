@@ -1,7 +1,6 @@
 <script setup>
-import { computed, ref } from 'vue'; // Importado para usar propiedades computadas
-import { useRoute } from 'vue-router'; // Importado para obtener la ruta actual
-
+import { computed, ref } from "vue"; // Importado para usar propiedades computadas
+import { useRoute } from "vue-router"; // Importado para obtener la ruta actual
 
 const route = useRoute(); // Obtiene la ruta actual
 const isActive = (path) => route.path.startsWith(path);
@@ -9,15 +8,32 @@ const isActive = (path) => route.path.startsWith(path);
 
 <template>
   <nav>
-    <router-link to="/users" class="router" :class="{'active': isActive('/users')}">Usuario</router-link>
-    <router-link to="/tec" class="router" :class="{'active': isActive('/tec')}">Tecnicos</router-link>
-    <router-link to="/phones" class="router" :class="{'active': isActive('/phones')}">Celulares</router-link>
-    <router-link to="/listSpareParts" class="router" :class="{'active': isActive('/listSpareParts')}">Repuestos</router-link>
+    <router-link
+      to="/users"
+      class="router"
+      :class="{ active: isActive('/users') }"
+      >Usuario</router-link
+    >
+    <router-link to="/tec" class="router" :class="{ active: isActive('/tec') }"
+      >Tecnicos</router-link
+    >
+    <router-link
+      to="/phones"
+      class="router"
+      :class="{ active: isActive('/phones') }"
+      >Celulares</router-link
+    >
+    <router-link
+      to="/spareParts"
+      class="router"
+      :class="{ active: isActive('/spareParts') }"
+      >Repuestos</router-link
+    >
   </nav>
 </template>
 
 <style scoped>
-nav{
+nav {
   background-color: rgb(216, 75, 23);
   display: flex;
   flex-direction: column;
@@ -26,12 +42,13 @@ nav{
   height: 100%;
   width: 100%;
 }
-.router{
+.router {
   color: white;
   padding: 20px;
   text-decoration: none;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  transition: all .3s ease;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  transition: all 0.3s ease;
 }
 
 .router.active {
