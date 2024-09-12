@@ -1,7 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue'; // Importado para usar propiedades computadas
 import { useRoute } from 'vue-router'; // Importado para obtener la ruta actual
-import celForm from './cel-form.vue';
 
 const route = useRoute(); // Obtiene la ruta actual
 const isActive = (path) => route.path === path;// Función para verificar si el enlace es el activo

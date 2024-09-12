@@ -60,7 +60,6 @@ nav {
   width: 9em;
   height: 3em;
   border-radius: 30em;
-  font-size: 15px;
   font-family: inherit;
   border: none;
   position: absolute;
@@ -68,8 +67,12 @@ nav {
   left: 10px;
   overflow: hidden;
   z-index: 1;
-  transition: color .4s ease-in;
+  transition: color .3s ease-in;
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.611);
+}
+
+.back-button ion-icon{
+  font-size: 30px;
 }
 
 .back-button::before {
