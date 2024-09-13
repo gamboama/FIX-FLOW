@@ -61,7 +61,6 @@ const deleteTechnician = (index) => {
 </script>
 
 <template>
-<<<<<<< Updated upstream
   <section id="container">
     <div v-if="isFormVisible" class="form-container">
       <h2>{{ isEditing ? 'Editar Técnico' : 'Añadir Técnico' }}</h2>
@@ -98,30 +97,6 @@ const deleteTechnician = (index) => {
       <p>Total de Técnicos: {{ filteredTechnicians.length }}</p>
     </div>
   </section>
-=======
-    <section id="container">
-        <div class="container-sec">
-            <form id="tec-form">
-                <h2>Ingrese para empezar turno</h2>
-                <span>Ingrese su usuario y clave</span>
-                <div class="container-input">
-                    <ion-icon name="person-outline"></ion-icon>
-                    <input type="text" placeholder="Usuario" />
-                </div>
-                <div class="container-input">
-                    <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" placeholder="Clave" />
-                </div>
-                <button class="button">INICIAR SESION</button>
-            </form>
-        </div>
-        <div class="container-sec">
-            <nav id="tec-nav">
-
-            </nav>
-        </div>
-    </section>
->>>>>>> Stashed changes
 </template>
 
 <style scoped>
