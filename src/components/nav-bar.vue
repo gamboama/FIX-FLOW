@@ -25,7 +25,8 @@ const isActive = (path) => route.path.startsWith(path);
     <router-link to="/tec" class="router" :class="{ 'active': isActive('/tec') }">Tecnicos</router-link>
     <router-link to="/phones" class="router" :class="{ 'active': isActive('/phones') }">Celulares</router-link>
     <router-link to="/spareparts" class="router" :class="{ 'active': isActive('/spareparts') }">Repuestos</router-link>
-    <button @click="goBack" :disabled="!canGoBack" class="back-button"><ion-icon name="arrow-back-circle-outline"></ion-icon></button>
+    <button @click="goBack" :disabled="!canGoBack" class="back-button"><ion-icon
+        name="arrow-back-circle-outline"></ion-icon></button>
   </nav>
 </template>
 
@@ -69,9 +70,10 @@ nav {
   z-index: 1;
   transition: color .3s ease-in;
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.611);
+  border: 1px solid transparent;
 }
 
-.back-button ion-icon{
+.back-button ion-icon {
   font-size: 30px;
 }
 
@@ -83,16 +85,17 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to right, rgb(122, 79, 0) 0%, orange 100%);
+  background-color: rgb(216, 75, 23);
   transition: .5s ease;
   display: block;
   z-index: -1;
 }
 
 .back-button:hover::before {
- width: 9em;
+  width: 9em;
 }
-.back-button:hover{
- color: white;
+
+.back-button:hover {
+  color: white;
 }
 </style>
