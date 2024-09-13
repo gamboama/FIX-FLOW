@@ -15,20 +15,31 @@ const filteredTechnicians = computed(() => {
 });
 
 const isFormVisible = ref(false);
-const toggleView = () => {
-  isFormVisible.value = !isFormVisible.value;
-};
+const isEditing = ref(false); // Nuevo estado para saber si estamos editando o añadiendo
+const currentEditIndex = ref(null); // Guardamos el índice del técnico a editar
 
 const newTechnician = ref({
   name: '',
   position: ''
 });
 
-const addTechnician = () => {
+const toggleView = () => {
+  isFormVisible.value = !isFormVisible.value;
+  isEditing.value = false; // Reiniciar estado de edición
+  newTechnician.value = { name: '', position: '' }; // Limpiar formulario
+};
+
+const addOrUpdateTechnician = () => {
   if (newTechnician.value.name && newTechnician.value.position) {
-    technicians.value.push({ ...newTechnician.value });
-    newTechnician.value.name = '';
-    newTechnician.value.position = '';
+    if (isEditing.value) {
+      // Actualizar técnico existente
+      technicians.value[currentEditIndex.value] = { ...newTechnician.value };
+      isEditing.value = false;
+    } else {
+      // Añadir nuevo técnico
+      technicians.value.push({ ...newTechnician.value });
+    }
+    newTechnician.value = { name: '', position: '' };
     isFormVisible.value = false;
   } else {
     alert('Por favor, completa ambos campos.');
@@ -36,7 +47,10 @@ const addTechnician = () => {
 };
 
 const editTechnician = (index) => {
-  alert(`Editando técnico: ${technicians.value[index].name}`);
+  isEditing.value = true;
+  currentEditIndex.value = index;
+  newTechnician.value = { ...technicians.value[index] }; // Poblar el formulario con los datos del técnico
+  isFormVisible.value = true;
 };
 
 const deleteTechnician = (index) => {
@@ -49,10 +63,10 @@ const deleteTechnician = (index) => {
 <template>
   <section id="container">
     <div v-if="isFormVisible" class="form-container">
-      <h2>Añadir Técnico</h2>
+      <h2>{{ isEditing ? 'Editar Técnico' : 'Añadir Técnico' }}</h2>
       <input v-model="newTechnician.name" type="text" placeholder="Nombre del técnico" />
       <input v-model="newTechnician.position" type="text" placeholder="Cargo del técnico" />
-      <button @click="addTechnician" class="save-btn">Guardar</button>
+      <button @click="addOrUpdateTechnician" class="save-btn">{{ isEditing ? 'Actualizar' : 'Guardar' }}</button>
       <button @click="toggleView" class="cancel-btn">Cancelar</button>
     </div>
 
